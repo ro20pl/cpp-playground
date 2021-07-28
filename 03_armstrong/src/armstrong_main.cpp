@@ -1,10 +1,18 @@
 #include <iostream>
+#include <cmath>
 
 bool isArmstrongNumber(int number)
 {
-	// TODO: implement some functionality to see if this number is an armstrong number
-
-	return false;
+    int cube_sum = 0;
+    
+    while (number > 0)
+        cube_sum += pow(number%10, 3);
+        number = number / 10;
+    
+    if (cube_sum == number)
+        return true;
+    else:
+        return false;
 }
 
 void printIsArmstrong(int number)
@@ -51,7 +59,8 @@ int main(int argc, char *argv[])
 	// Get the first argument
 	std::string argumentAsString = argv[1];
 	
-	// TODO: read number / cast to integer
+    std::cin >> argumentAsString >> std::endl;
+    argumentAsNumber = std::stoi(argumentAsString);
 
 	printIsArmstrong(readNumber);
 	return 0;
