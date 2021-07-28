@@ -1,4 +1,4 @@
-﻿#include <string.h>
+#include <string.h>
 #include <iostream>
 
 // Define the maximum length for the name to use.
@@ -33,7 +33,7 @@ struct Book
 
 	void addAuthor(Author author)
 	{
-		// TODO: add an author to the container authors array.
+        authors[numAuthors] = author;
 		numAuthors++;
 	}
 
@@ -43,7 +43,8 @@ struct Book
 		std::cout << "------" << std::endl;
 		std::cout << this->title << std::endl;
 
-		// TODO: add all authors
+        for(i = 1; i <= numAuthors; i++)
+            addAuthor(author)
 
 	}
 };
@@ -84,10 +85,17 @@ int main()
 	
 	author.setName("Anna Rosling Ronnlund");
 	book3.addAuthor(author);
+    
+    book4.id = 4;
+    boo4.numAuthors = 0;
+    setBookName(book4, "Clean Architecture");
+    author.setName("Robert C. Martin");
+    book4.addAuthor(author);
 
 	// Display the books
 	book1.print();
 	book2.print();
-	book3.print();
+    book3.print();
+    book4.print();
 	return 0;
 }
